@@ -1,0 +1,20 @@
+-
+    var arr = [
+        {caption:"СОБЕРИ СВОЮ ПЕЧЬ",value:"КОНФИГУРАТОР",img:"main-1"},
+        {caption:"TOLSTOY ",value:"ГАСТРОНОМИЧЕСКАЯ ЛИНИЯ",img:"main-2"},
+        {caption:"CHEKHOV ",value:"ПЕКАРСКАЯ ЛИНИЯ (ХЛЕБОБУЛОЧНАЯ – КОНДИТЕРСКАЯ)",img:"main-3"},
+        {caption:"GOGOL ",value:"ЛИНИЯ КОНВЕКЦИОННЫХ ПЕЧЕЙ",img:"main-4"},
+    ]
+
+section.slider.main-big-slider(data-slider="main")
+    h1.visually-hidden pwd-test
+    .swiper-container
+        .swiper-wrapper
+            each card in arr
+                .main-slide.swiper-slide(style="background-image:url('img/" + card.img +".jpg');")
+                    .container.main-slide__container
+                        p.main-slide__top-text В поисках лучшего
+                        p.main-slide__caption=card.caption
+                        p.main-slide__value=card.value
+                        a.main-slide__link.button(href="#") Подробнее
+    .swiper-pagination

@@ -1,0 +1,34 @@
+section.big-card
+    h1.big-card__caption TOLSTOY
+    .big-card__row
+        .big-card__panel
+            img(src="img/panel-tolstoy.png", alt="panel")
+        .big-card__img-block
+            .big-card__big-img.js-fancy-big
+                img(src="img/big-card-tolstoy.png", alt="big-card")
+            .big-card__slider.slider(data-slider="big-card")
+                button.big-card__next.js-btn-next(type="button")
+                    img(src="img/big-left-arrow.png", alt="arrow")
+                .swiper-container.big-card__container
+                    .swiper-wrapper.big-card__wrapper
+                        .swiper-slide.big-card__slide.js-fancy-min.active
+                            .big-card__slide-block
+                                a(href="img/big-card-tolstoy.png")
+                                    img(src="img/big-card-tolstoy.png", alt="min-card")
+                        .swiper-slide.big-card__slide.js-fancy-min
+                            .big-card__slide-block
+                                a(href="img/min-card-tolstoy-1.png")
+                                    img(src="img/min-card-tolstoy-1.png", alt="min-card")
+                        .swiper-slide.big-card__slide.js-fancy-min
+                            .big-card__slide-block
+                                a(href="img/min-card-tolstoy-2.png")
+                                    img(src="img/min-card-tolstoy-2.png", alt="min-card")
+                button.big-card__prev.js-btn-prev(type="button")
+                    img(src="img/big-right-arrow.png", alt="arrow")
+            .big-card__video.js-popup-btn(data-block="video")
+                img(src="img/video.jpg", alt="video")
+                button.big-card__play(type="button")
+                    img(src="img/play.png", alt="play")
+        include dl.pug
+        include table.pug
+

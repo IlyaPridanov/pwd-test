@@ -1,0 +1,68 @@
+-
+    var arr = [
+        {caption:"Manual cooking",
+        arrRow:[
+            {name:"Convection cooking",value:"30&deg;C-260&deg;C",classTag:"black"},
+            {name:"X ECOSYSTEM",value:"30&deg;C-230&deg;C",classTag:"black"},
+            {name:"Steaming",value:"35&deg;C-130&deg;C",classTag:"black"},
+            {name:"X DRY",value:"30&deg;C-260&deg;C",classTag:"black"},
+            {name:"Delta T Cooking with X CORE",value:"",classTag:"black"},
+            {name:"X CORE",value:"",classTag:"black"},
+        ]},
+        {caption:"Srecial Cycles",
+        arrRow:[
+            {name:"Overnight Cooking",value:"",classTag:"black"},
+            {name:"Automatic Cooking",value:"",classTag:"black"},
+            {name:"X CLEAN",value:"",classTag:"white"},
+        ]},
+        {caption:"Automatic Cooking",
+        arrRow:[
+            {name:"Recipe book",value:"99 programs",classTag:"black"},
+            {name:"Overnight automatic cleaning program",value:"",classTag:"black"},
+            {name:"Cooking cycles for each program",value:"n&deg;4",classTag:"black"},
+        ]},
+        {caption:"Air sistribution im the cooking chamber",
+        arrRow:[
+            {name:"XEQUAL",value:"",classTag:"black"},
+        ]},
+        {caption:"X DOUBLE",
+        arrRow:[
+            {name:"X DOUBLE with ovens",value:"",classTag:"white"},
+            {name:"X DOUBLE with blast chillers",value:"",classTag:"white"},
+            {name:"X DOUBLE with proofers",value:"",classTag:"white"},
+            {name:"X DOUBLE with stand",value:"",classTag:"white"},
+        ]},
+        {caption:"Other function",
+        arrRow:[
+            {name:"Infinity time",value:"",classTag:"black"},
+            {name:"Unit of temperature:F&deg; or C&deg;",value:"",classTag:"black"},
+            {name:"Lights",value:"HALOGEN",classTag:"black"},
+        ]},
+        {caption:"Technical details",
+        arrRow:[
+            {name:"Intenal glass with easy dean system",value:"",classTag:"black"},
+            {name:"X SAFE",value:"",classTag:"black"},
+            {name:"External connection for core probe",value:"",classTag:"black"},
+            {name:"Digital water injector control",value:"",classTag:"black"},
+            {name:"X REVERSE door",value:"",classTag:"black"},
+        ]},
+    ]
+
+.big-card__table.technology
+    .technology__caption Технологии
+    .technology__table
+        each item in arr
+            .technology__row-caption=item.caption
+            each row in item.arrRow
+                .technology__row
+                    span.technology__name=row.name
+                    span.technology__value!=row.value
+                    span.technology__tag-column
+                        span.technology__tag(class=row.classTag)
+    ul.technology__about-list
+        li.technology__about-item Standart
+            span.technology__tag.black
+        li.technology__about-item Option
+            span.technology__tag.black
+        li.technology__about-item Lorem
+            span.technology__tag -

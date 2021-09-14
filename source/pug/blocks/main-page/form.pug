@@ -1,0 +1,14 @@
+section.main-form(style="background-image:url('img/form-bcg.jpg');")
+    .main-form__container
+        h2.main-form__caption Подписывайтесь на новости
+        form.main-form__form(action="#" method="POST")
+            .main-form__row
+                input(type="email" placeholder="Введите свой e-mail")
+                button(type="submit") ПОДПИСАТЬСЯ
+            input.visually-hidden(type="checkbox" id="post-checkbox")
+            label(for="post-checkbox")
+                span
+                |Принимаю условия
+                a(href="#") Пользовательского соглашения
+                |и условия
+                a(href="#") Политики конфиденциальности

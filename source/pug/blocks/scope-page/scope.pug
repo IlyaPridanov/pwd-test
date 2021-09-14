@@ -1,0 +1,64 @@
+-
+    var arr = [
+        {img:"img/tolstoy-oven-6.png",caption:"TL12DYC / TL12DY0",text:"12 GN1/1"},
+        {img:"img/tolstoy-oven-5.png",caption:"TL07DYC / TL07DY0",text:"7 GN1/1"},
+        {img:"img/tolstoy-oven-4.png",caption:"TL05DYC / TL05DY0",text:"5 GN1/1"},
+        {img:"img/GG4dix.png",caption:"GG4DIH",text:"4 TRAYS 600x400 - GN 1/1"},
+        {img:"img/GG43dix.png",caption:"GG43DIHX0",text:"4 TRAYS 460x340"},
+    ]
+
+    var selectArr = [
+        {
+            caption:"Тип контроля",
+            itemArr:[
+                "Механический",
+                "Электронный"
+            ]
+        },{
+            caption:"Вместимость противней GN/1",
+            itemArr:[
+                "12",
+                "10",
+                "8",
+                "7",
+                "5",
+                "4"
+            ]
+        },{
+            caption:"Фильтр 3",
+            itemArr:[
+                "1",
+                "2",
+            ]
+        },{
+            caption:"Фильтр 4",
+            itemArr:[
+                "1",
+                "2",
+            ]
+        }
+    ]
+include ../../mixin.pug
+
+section.scope
+    .container
+        h2.scope__caption ВЫБЕРИТЕ СВОЕ ОБОРУДОВАНИЕ
+        p.scope__text pwd-test разработала линейки печей для удовлетворения потребностей профессионалов в любых сферах - сфере общественного питания, коммерческого кейтеринга, супермаркетов, пиццерий, пекарен, баров и т.д.
+        +form-search("scope__form","Введите название оборудования...")
+        +form-radio("scope__form")
+        +form-select("scope__form",selectArr)
+        .scope__row
+            each item in arr
+                .scope__column
+                    .scope__img
+                        img(src=item.img, alt="scope")
+                        ul.hover-list.scope__list
+                            li.hover-list__item
+                                a.hover-list__link(href="#") Информация
+                            li.hover-list__item
+                                a.hover-list__link(href="#") Сравнить
+                            li.hover-list__item
+                                a.hover-list__link(href="#") Конфигурировать
+                    .scope__min-caption=item.caption
+                    .scope__text-item=item.text
+

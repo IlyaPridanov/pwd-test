@@ -1,0 +1,21 @@
+-
+    var arr = [
+        {name:"Technology",text:"Electric / Combi"},
+        {name:"Tray capacity",text:"12 GN1/1"},
+        {name:"Distance between tray",text:"70mm"},
+        {name:"Frequency (Hz)",text:"50/60"},
+        {name:"Voltage",text:"400v 3N~"},
+        {name:"Power (kW)",text:"15,7"},
+        {name:"Oven size (WxDxH mm)",text:"867x826x1286"},
+        {name:"Max cooking temparature",text:"260C"},
+        {name:"Oven weight kg",text:"131"},
+    ]
+
+.big-card__characteristic.characteristic
+    .characteristic__caption TL12DYC / TL12DY0 copia
+    .characteristic__name Технические характеристики
+    dl.characteristic__list
+        each item in arr
+            dt=item.name
+            dd=item.text
+    a.characteristic__link(href="#") Скачать спецификацию

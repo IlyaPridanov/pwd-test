@@ -1,0 +1,38 @@
+-
+    var arr = [
+        {
+            caption:"Последние новости",
+            arrLink:[
+                "Новость 1",
+                "Новость 2",
+                "Новость 3",
+                "Новость 4",
+                "Новость 5",
+                "Новость 6",
+            ]
+        },
+        {
+            caption:"Архив новостей",
+            arrLink:[
+                "Январь 2021",
+                "Ноябрь 2020",
+                "Август 2020",
+                "Апрель 2020",
+                "Март 2020",
+                "Февраль 2020",
+            ]
+        },
+    ]
+
+form.news__bar-search(action="#" method="GET")
+    input(type="search" placeholder="Поиск...")
+    .news__bar-row
+        each item in arr
+            .news__bar-column
+                .news__bar-caption=item.caption
+                ul.news__bar-list
+                    each link in item.arrLink
+                        li.news__bar-item
+                            a.news__bar-link(href="#")
+                                span=">"
+                                =link

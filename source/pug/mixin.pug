@@ -1,0 +1,12 @@
+mixin card(img,cash,text,sale)
+    .card
+        .card__img
+            img(src=img)
+            svg(width="22" height="18")
+                use(xlink:href="#icon-like")
+        .card__cash(class=sale ? "" : "sale")
+            =cash
+            if sale
+                span=sale
+        p.card__text=text
+        button.card__btn(type="button") В корзину

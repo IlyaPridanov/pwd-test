@@ -1,0 +1,149 @@
+-
+    arr = [
+        {caption:"<span>TOLSTOY</span> Решетки и противни",
+        arr2:[
+            {
+                img:"img/TLP1.png",
+                name:"TLP1",
+                text:"ТЕРМОЩУП SQUERO"
+            },
+            {
+                img:"img/TLG01.png",
+                name:"TLG01",
+                text:"GN 1/1 ТЕФЛОНОВАЯ  РЕШЕТКА НА 8 КУР"
+            },
+            {
+                img:"img/TLG02.png",
+                name:"TLG02",
+                text:"GN 1/1 ТЕФЛОНОВЫЙ ПРОТИВЕНЬ ДЛЯ РЕБРЫШЕК"
+            },
+            {
+                img:"img/TLG03.png",
+                name:"TLG03",
+                text:"GN 1/1 ПРОТИВЕНЬ ДЛЯ ШАМПУРОВ"
+            },
+            {
+                img:"img/TLG04.png",
+                name:"TLG04",
+                text:"GN 1/1 ГЛАДКАЯ ЖАРОЧНАЯ ПЛИТА"
+            },
+            {
+                img:"img/TLG05.png",
+                name:"TLG05",
+                text:"GN 1/1 РИФЛЕНАЯ ЖАРОЧНАЯ ПЛИТА"
+            },
+            {
+                img:"img/TLG06.png",
+                name:"TLG06",
+                text:"GN 1/1 РЕШЕТКА ДЛЯ ЖАРКИ"
+            },
+            {
+                img:"img/TLG07.png",
+                name:"TLG07",
+                text:"GN 1/1 ПРОТИВЕНЬ ДЛЯ ЯИЦ"
+            },
+            {
+                img:"img/TLG08.png",
+                name:"TLG08",
+                text:"GN 1/1 РЕШЕТКА ИЗ НЕРЖАВЕЮЩЕЙ СТАЛИ"
+            },
+        ]},
+        {caption:"<span>CECHOV</span> Решетки и противни",
+        arr2:[
+            {
+                img:"img/CCB01.png",
+                name:"CCB01",
+                text:"600X400 ПЕРФОРИРОВАННЫЙ АЛЮМИНИЕВЫЙ ПРОТИВЕНЬ  С 5 КАНАЛА"
+            },
+            {
+                img:"img/CCB02.png",
+                name:"CCB02",
+                text:"600X400 ПЕРФОРИРОВАННЫЙ АЛЮМИНИЕВЫЙ ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB03.png",
+                name:"CCB03",
+                text:"600X400 АЛЮМИНИЕВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB04.png",
+                name:"CCB04",
+                text:"600X400 ТЕФЛОНОВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB05.png",
+                name:"CCB05",
+                text:"600X400 ТЕФЛОНОВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB06.png",
+                name:"CCB06",
+                text:"600X400 ХРОМИРОВАННАЯ  РЕШЕТКА"
+            },
+        ]},
+        {caption:"<span>GOGOL</span> Решетки и противни",
+        arr2:[
+            {
+                img:"img/CCB01.png",
+                name:"CCB01",
+                text:"600X400 ПЕРФОРИРОВАННЫЙ АЛЮМИНИЕВЫЙ ПРОТИВЕНЬ  С 5 КАНАЛА"
+            },
+            {
+                img:"img/CCB02.png",
+                name:"CCB02",
+                text:"600X400 ПЕРФОРИРОВАННЫЙ АЛЮМИНИЕВЫЙ ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB03.png",
+                name:"CCB03",
+                text:"600X400 АЛЮМИНИЕВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB04.png",
+                name:"CCB04",
+                text:"600X400 ТЕФЛОНОВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB05.png",
+                name:"CCB05",
+                text:"600X400 ТЕФЛОНОВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/CCB06.png",
+                name:"CCB06",
+                text:"600X400 ХРОМИРОВАННАЯ  РЕШЕТКА"
+            },
+            {
+                img:"img/GGC01.png",
+                name:"GGC01",
+                text:"460X340 АЛЮМИНИЕВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/GGC02.png",
+                name:"GGC02",
+                text:"460X340 ПЕРФОРИРОВАННЫЙ АЛЮМИНИЕВЫЙ ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/GGC03.png",
+                name:"GGC03",
+                text:"460X340 ПЕРФОРИРОВАННЫЙ АЛЮМИНИЕВЫЙ ТЕФЛОНОВЫЙ  ПРОТИВЕНЬ"
+            },
+            {
+                img:"img/GGC04.png",
+                name:"GGC04",
+                text:"460X340 ХРОМИРОВАННАЯ  РЕШЕТКА"
+            },
+        ]},
+    ]
+
+each block in arr
+    section.lattice
+        .container
+            h2.lattice__caption!=block.caption
+            .lattice__row
+                each column in block.arr2
+                    .lattice__column
+                        .lattice__img
+                            img(src=column.img, alt="lattice")
+                        a.lattice__link(href="#")=column.name
+                        .lattice__text=column.text

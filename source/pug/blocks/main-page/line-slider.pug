@@ -1,0 +1,26 @@
+-
+    var arr = [
+        {caption:"TOLSTOY",text:"ГАСТРОНОМИЧЕСКАЯ  ЛИНИЯ",img:"TOLSTOJ-line"},
+        {caption:"CHEKHOV",text:"ПЕКАРСКАЯ ЛИНИЯ (ХЛЕБОБУЛОЧНАЯ – КОНДИТЕРСКАЯ)",img:"CECHOV-line"},
+        {caption:"GOGOL",text:"ЛИНИЯ  КОНВЕКЦИОННЫХ  ПЕЧЕЙ",img:"GOGOL-line"},
+        {caption:"PUSHKIN",text:"ЛИНИЯ  РАССТОЕЧНЫХ  ШКАФОВ",img:"PUSKIN-line"},
+        {caption:"АКСЕССУАРЫ",img:"accessories-line"},
+    ]
+
+section.slider.line-slider(data-slider="line")
+    h2.visually-hidden pwd-test
+    .container.line-slider__container
+        .swiper-container
+            .swiper-wrapper
+                each card in arr
+                    .line-card.swiper-slide
+                        .line-card__img
+                            img(src="img/"+card.img+".png", alt="line")
+                        .line-card__caption=card.caption
+                        if (card.text)
+                            .line-card__text=card.text
+                        a.button.line-card__link(href="#") Вся линейка
+        button.line-slider__button-next.js-btn-next(type="button")
+            img(src="img/big-left-arrow.png", alt="arrow")
+        button.line-slider__button-prev.js-btn-prev(type="button")
+            img(src="img/big-right-arrow.png", alt="arrow")

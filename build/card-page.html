@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.">
+    <title>Страница карточки</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  </head>
+  <body><div style="display:none">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 18 18">
+  <polygon points="18,1.3 16.7,0 9,7.7 1.3,0 0,1.3 7.7,9 0,16.7 1.3,18 9,10.3 16.7,18 18,16.7 10.3,9 "></polygon>
+</symbol><symbol id="icon-map-red" viewBox="0 0 24 30">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8468 5.21607C19.5821 1.90143 15.993 0 12.0004 0C8.00771 0 4.41856 1.90143 2.15389 5.21607C-0.0996459 8.51397 -0.619997 12.6892 0.759185 16.3779C1.12808 17.3853 1.71448 18.364 2.49794 19.2811L11.2107 29.6307C11.4077 29.865 11.6965 30 12.0004 30C12.3042 30 12.593 29.8651 12.79 29.6307L21.5003 19.2839C22.2873 18.3615 22.8729 17.3839 23.2387 16.3846C24.6207 12.6892 24.1003 8.51397 21.8468 5.21607ZM6.19336 12.0979C6.19336 8.85872 8.79923 6.22375 12.0019 6.22375C15.2045 6.22375 17.8104 8.85907 17.8104 12.0979C17.8104 15.3371 15.2049 17.972 12.0019 17.972C8.79888 17.972 6.19336 15.3371 6.19336 12.0979Z" fill="#D04241"></path>
+</symbol><symbol id="icon-search" viewBox="0 0 18 18">
+<path d="M17 17L12.0962 12.0962M12.0962 12.0962C13.2725 10.9199 14 9.29493 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14C9.29493 14 10.9199 13.2725 12.0962 12.0962Z" stroke="#2e384d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol><symbol id="icon-telega" viewBox="0 0 21 17">
+<path d="M2.09052 7.60321C7.325 5.2747 10.8155 3.7396 12.5619 2.99791C17.5485 0.880254 18.5846 0.512394 19.26 0.500118C19.4085 0.497576 19.7406 0.535161 19.9558 0.713395C20.1374 0.863893 20.1874 1.06719 20.2113 1.20988C20.2352 1.35257 20.265 1.67762 20.2413 1.9316C19.9711 4.83051 18.8019 11.8654 18.207 15.1122C17.9553 16.4861 17.4597 16.9467 16.9799 16.9918C15.9372 17.0898 15.1454 16.2882 14.1355 15.6123C12.5551 14.5546 11.6623 13.8962 10.1283 12.864C8.35552 11.6712 9.50475 11.0156 10.5151 9.94423C10.7795 9.66384 15.3737 5.39715 15.4627 5.0101C15.4738 4.96169 15.4841 4.78125 15.3791 4.68597C15.2741 4.59069 15.1192 4.62327 15.0073 4.64919C14.8488 4.68592 12.3242 6.38967 7.43349 9.76045C6.71689 10.2629 6.06781 10.5077 5.48626 10.4948C4.84514 10.4807 3.61189 10.1247 2.6951 9.82044C1.57062 9.44723 0.676901 9.24991 0.754724 8.61609C0.795259 8.28596 1.24053 7.94833 2.09052 7.60321Z" fill="#8798AD"></path>
+</symbol></svg>
+</div>
+    <header class="header">
+      <div class="container header__row">
+        <div class="header__logo"><img src="img/logo.jpg" alt="logo"></div>
+        <nav class="nav header__nav js-block js-block-inactive" data-block="header-nav">
+          <ul class="nav__list">
+            <li class="nav__item active"><a class="nav__link" href="#">О компании</a></li>
+            <li class="nav__item"><span class="nav__link">Продукция</span>
+              <ul class="nav__two-list">
+                <li class="nav__two-item"><a class="nav__two-link" href="#">TOLSTOY Гастрономическая линия</a>
+                </li>
+                <li class="nav__two-item"><a class="nav__two-link" href="#">CHEKHOV Пекарская линия</a>
+                </li>
+                <li class="nav__two-item"><a class="nav__two-link" href="#">GOGOL Линия конвекционных печей</a>
+                </li>
+                <li class="nav__two-item"><a class="nav__two-link" href="#">PUSHKIN Линия расстоечных шкафов</a>
+                </li>
+                <li class="nav__two-item"><span class="nav__two-link">АКСЕССУАРЫ</span><span>&gt;</span>
+                  <ul class="nav__three-list">
+                    <li class="nav__three-item"><a class="nav__three-link" href="#">КОПТИЛЬНИ</a></li>
+                    <li class="nav__three-item"><a class="nav__three-link" href="#">РЕШЕТКИ И ПРОТИВНИ</a></li>
+                    <li class="nav__three-item"><a class="nav__three-link" href="#">ВЫТЯЖКИ</a></li>
+                    <li class="nav__three-item"><a class="nav__three-link" href="#">УХОД И ОБСЛУЖИВАНИЕ</a></li>
+                    <li class="nav__three-item"><a class="nav__three-link" href="#">ПОДСТАВКИ</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Сферы применения</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Конфигуратор</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Где купить</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Сервис</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <form class="header__search js-block js-block-inactive" data-block="search" action="#" method="GET">
+          <div class="header__lang">
+            <label>
+              <input class="visually-hidden" type="radio" name="lang" checked=""><span>RU</span>
+            </label>
+            <label>
+              <input class="visually-hidden" type="radio" name="lang"><span>EN</span>
+            </label>
+          </div>
+          <input type="search" name="header-search" placeholder="Поиск по сайту">
+        </form>
+        <button class="header__btn-search js-btn" type="button" data-block="search">
+          <svg width="25" height="25">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+        </button>
+        <button class="hamburger header__hamburger js-btn" type="button" data-block="header-nav"><span class="hamburger__bar hamburger__bar--bar1"></span><span class="hamburger__bar hamburger__bar--bar2"></span><span class="hamburger__bar hamburger__bar--bar3"></span><span class="hamburger__bar hamburger__bar--bar4"></span></button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__grey-block">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Продукция</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">TOLSTOY</a></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__link">TL12DYC / TL12DY0</span></li>
+          </ul>
+          <section class="big-card">
+            <h1 class="big-card__caption">TOLSTOY</h1>
+            <div class="big-card__row">
+              <div class="big-card__panel"><img src="img/panel-tolstoy.png" alt="panel"></div>
+              <div class="big-card__img-block">
+                <div class="big-card__big-img js-fancy-big"><img src="img/big-card-tolstoy.png" alt="big-card"></div>
+                <div class="big-card__slider slider" data-slider="big-card">
+                  <button class="big-card__next js-btn-next" type="button"><img src="img/big-left-arrow.png" alt="arrow"></button>
+                  <div class="swiper-container big-card__container">
+                    <div class="swiper-wrapper big-card__wrapper">
+                      <div class="swiper-slide big-card__slide js-fancy-min active">
+                        <div class="big-card__slide-block"><a href="img/big-card-tolstoy.png"><img src="img/big-card-tolstoy.png" alt="min-card"></a></div>
+                      </div>
+                      <div class="swiper-slide big-card__slide js-fancy-min">
+                        <div class="big-card__slide-block"><a href="img/min-card-tolstoy-1.png"><img src="img/min-card-tolstoy-1.png" alt="min-card"></a></div>
+                      </div>
+                      <div class="swiper-slide big-card__slide js-fancy-min">
+                        <div class="big-card__slide-block"><a href="img/min-card-tolstoy-2.png"><img src="img/min-card-tolstoy-2.png" alt="min-card"></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="big-card__prev js-btn-prev" type="button"><img src="img/big-right-arrow.png" alt="arrow"></button>
+                </div>
+                <div class="big-card__video js-popup-btn" data-block="video"><img src="img/video.jpg" alt="video">
+                  <button class="big-card__play" type="button"><img src="img/play.png" alt="play"></button>
+                </div>
+              </div>
+              <div class="big-card__characteristic characteristic">
+                <div class="characteristic__caption">TL12DYC / TL12DY0 copia</div>
+                <div class="characteristic__name">Технические характеристики</div>
+                <dl class="characteristic__list">
+                  <dt>Technology</dt>
+                  <dd>Electric / Combi</dd>
+                  <dt>Tray capacity</dt>
+                  <dd>12 GN1/1</dd>
+                  <dt>Distance between tray</dt>
+                  <dd>70mm</dd>
+                  <dt>Frequency (Hz)</dt>
+                  <dd>50/60</dd>
+                  <dt>Voltage</dt>
+                  <dd>400v 3N~</dd>
+                  <dt>Power (kW)</dt>
+                  <dd>15,7</dd>
+                  <dt>Oven size (WxDxH mm)</dt>
+                  <dd>867x826x1286</dd>
+                  <dt>Max cooking temparature</dt>
+                  <dd>260C</dd>
+                  <dt>Oven weight kg</dt>
+                  <dd>131</dd>
+                </dl><a class="characteristic__link" href="#">Скачать спецификацию</a>
+              </div>
+              <div class="big-card__table technology">
+                <div class="technology__caption">Технологии</div>
+                <div class="technology__table">
+                  <div class="technology__row-caption">Manual cooking</div>
+                  <div class="technology__row"><span class="technology__name">Convection cooking</span><span class="technology__value">30&deg;C-260&deg;C</span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X ECOSYSTEM</span><span class="technology__value">30&deg;C-230&deg;C</span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Steaming</span><span class="technology__value">35&deg;C-130&deg;C</span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X DRY</span><span class="technology__value">30&deg;C-260&deg;C</span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Delta T Cooking with X CORE</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X CORE</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row-caption">Srecial Cycles</div>
+                  <div class="technology__row"><span class="technology__name">Overnight Cooking</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Automatic Cooking</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X CLEAN</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag white"></span></span></div>
+                  <div class="technology__row-caption">Automatic Cooking</div>
+                  <div class="technology__row"><span class="technology__name">Recipe book</span><span class="technology__value">99 programs</span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Overnight automatic cleaning program</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Cooking cycles for each program</span><span class="technology__value">n&deg;4</span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row-caption">Air sistribution im the cooking chamber</div>
+                  <div class="technology__row"><span class="technology__name">XEQUAL</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row-caption">X DOUBLE</div>
+                  <div class="technology__row"><span class="technology__name">X DOUBLE with ovens</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag white"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X DOUBLE with blast chillers</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag white"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X DOUBLE with proofers</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag white"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X DOUBLE with stand</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag white"></span></span></div>
+                  <div class="technology__row-caption">Other function</div>
+                  <div class="technology__row"><span class="technology__name">Infinity time</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Unit of temperature:F&amp;deg; or C&amp;deg;</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Lights</span><span class="technology__value">HALOGEN</span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row-caption">Technical details</div>
+                  <div class="technology__row"><span class="technology__name">Intenal glass with easy dean system</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X SAFE</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">External connection for core probe</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">Digital water injector control</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                  <div class="technology__row"><span class="technology__name">X REVERSE door</span><span class="technology__value"></span><span class="technology__tag-column"><span class="technology__tag black"></span></span></div>
+                </div>
+                <ul class="technology__about-list">
+                  <li class="technology__about-item">Standart<span class="technology__tag black"></span></li>
+                  <li class="technology__about-item">Option<span class="technology__tag black"></span></li>
+                  <li class="technology__about-item">Lorem<span class="technology__tag">-</span></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="popup js-popup hidden" data-block="video">
+        <div class="popup__video"><iframe src="https://www.youtube.com/embed/oa-9OBDIIeo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <button class="popup__close js-popup-close" type="button">
+            <svg width="25" height="25">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__row-top container">
+          <div class="footer__logo"><img src="img/logo.jpg" alt="logo"></div>
+          <div class="footer__text-column">
+            <p><strong>Производственная площадка:</strong>425000, Республика Марий Эл, г. Волжск, ул. Промбаза, дом.1</p>
+            <p><strong>Офис продаж:</strong>119334, город Москва, Ленинский проспект, дом 37, корпус 1, помещение 2-5, этаж 4<a href="tel:+74952601310">Тел: +7 495 260 1310</a>(многоканальный)</p>
+          </div>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__nav-link" href="#">О КОМПАНИИ</a></li>
+            <li class="footer__item"><a class="footer__nav-link" href="#">ПРОДУКЦИЯ</a></li>
+            <li class="footer__item"><a class="footer__nav-link" href="#">СФЕРЫ ПРИМЕНЕНИЯ</a></li>
+            <li class="footer__item"><a class="footer__nav-link" href="#">КОНФИГУРАТОР</a></li>
+            <li class="footer__item"><a class="footer__nav-link" href="#">ГДЕ КУПИТЬ</a></li>
+            <li class="footer__item"><a class="footer__nav-link" href="#">СЕРВИС</a></li>
+            <li class="footer__item"><a class="footer__nav-link" href="#">КОНТАКТЫ</a></li>
+          </ul>
+          <div class="footer__brand-column">
+            <div class="footer__brand"><img src="img/PolairGroup.png" alt="PolairGroup"></div>
+            <p class="footer__brand-text">Входит в POLAIR GROUP</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__row-bottom container">
+          <div class="footer__copy">© Copyright 2021 - pwd-test- by Studioverde</div>
+          <ul class="footer__social-list">
+            <li class="footer__social-item"><a class="footer__social-link" href="#" aria-label="social"><img src="img/youtube.png" alt="youtube"></a></li>
+            <li class="footer__social-item"><a class="footer__social-link" href="#" aria-label="social"><img src="img/insta.png" alt="insta"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
