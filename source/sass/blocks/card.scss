@@ -1,6 +1,7 @@
 .card {
+    padding: 10px;
     max-width: 100%;
-    min-height: 396px;
+    min-height: 416px;
     display: flex;
     flex-direction: column;
 
@@ -91,7 +92,7 @@
     @include font(16px,400,1.25,0,$text-default);
 }
 
-.card__btn {
+.card__basket {
     @include btn();
     @include center();
     @include font(16px,400,1.2,0.01em,$white);
@@ -109,5 +110,71 @@
 
     &:active {
         background: #1435A8;
+    }
+}
+
+.card__btn-block {
+    @include center();
+    margin-top: auto;
+}
+
+.card__btn {
+    @include btn();
+    @include center();
+    width: 44px;
+    height: 44px;
+    border-radius: 3px;
+    background: #F8F8F8;
+
+    & svg {
+        fill: $btn-color;
+    }
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        background-color: #F2F2F2;
+
+        & svg {
+            fill: #173DC2;
+        }
+
+    }
+
+    &:active {
+        background-color: #EDEDED;
+
+        & svg {
+            fill: #1435A8;
+        }
+
+    }
+}
+
+.card__value {
+    padding: 5px;
+    flex: 0 0 68px;
+    @include center();
+    @include font(16px,400,1,0,$text-default);
+}
+
+@media screen and (max-width:991px) {
+    .card {
+        padding: 0;
+        min-height: 397px;
+    }
+
+    .card__cash {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width:768px-1px) {
+    .card {
+        min-height: 0;
+    }
+
+    .card__link {
+        margin-bottom: 19px;
     }
 }

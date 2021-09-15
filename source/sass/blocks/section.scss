@@ -1,11 +1,11 @@
 .section {
-    padding: 72px 80px 20px;
+    padding: 72px 70px 20px;
     background-color: #fff;
 }
 
 .section__caption {
     margin: 0;
-    margin-bottom: 44px;
+    margin-bottom: 34px;
     @include font(24px,400,1.1,0,$header-color);
 }
 
@@ -16,7 +16,53 @@
 }
 
 .section__card {
-    flex: 0 0 305px;
-    width: 305px;
-    margin-bottom: 52px;
+    flex: 0 0 325px;
+    width: 325px;
+    margin-bottom: 42px;
 }
+
+@media screen and (max-width:1339px-1px) {
+    .section__row {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .section {
+        padding: 72px 40px 20px;
+    }
+
+    .section__caption {
+        margin-bottom: 45px;
+    }
+
+    .section__card {
+        margin-bottom: 52px;
+    }
+}
+
+@media screen and (max-width:768px-1px) {
+    .section {
+        padding: 72px 20px 20px;
+    }
+
+    .section__row {
+        display: block;
+    }
+
+    .section__card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+    }
+}
+
+
+
+@media screen and (max-width:360px-1px) {
+    .section__card {
+        width: auto;
+        margin-bottom: 51px;
+    }
+}
+

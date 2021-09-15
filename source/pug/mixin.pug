@@ -1,7 +1,7 @@
 mixin card(className,img,cash,text,sale)
     .card(class=className)
         .card__img
-            img(src=img)
+            img(src=img alt="card-img")
             button.card__like(type="button")
                 svg(width="22" height="18")
                     use(xlink:href="#icon-like")
@@ -10,4 +10,13 @@ mixin card(className,img,cash,text,sale)
             if sale
                 span=sale
         a(href="#").card__link=text
-        button.card__btn(type="button") В корзину
+        button.card__basket(type="button") В корзину
+        .card__btn-block.hidden
+            button.card__btn(type="button" data-btn="minus")
+                svg(width="20" height="3")
+                    use(xlink:href="#icon-minus")
+            .card__value(data-value="0")
+                !="0 шт"
+            button.card__btn(type="button" data-btn="plus")
+                svg(width="20" height="20")
+                    use(xlink:href="#icon-plus")
