@@ -3,3 +3,4 @@
 // Modules
 
 //= modules/like.js
+//= modules/value.js
