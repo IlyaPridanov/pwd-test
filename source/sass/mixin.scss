@@ -51,7 +51,7 @@
 }
 
 @mixin font($size , $weight ,$height , $spacing, $color) {
-    font-family: $pt;
+    font-family: $roboto;
     font-size: $size ;
     font-weight: $weight;
     line-height: $height;
@@ -59,14 +59,6 @@
     color: $color;
 }
 
-@mixin font-m($size , $weight ,$height , $spacing, $color) {
-    font-family: $Mpro;
-    font-size: $size ;
-    font-weight: $weight;
-    line-height: $height;
-    letter-spacing: $spacing;
-    color: $color;
-}
 
 
 

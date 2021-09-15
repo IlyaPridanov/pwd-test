@@ -3,21 +3,25 @@ include pug/mixin.pug
 -
     var cardArr = [
         {
+            className: 'section__card',
             img: 'img/image-1.png',
             cash: '189 ₽',
             text: 'Oral-B ополаскиватель для полости рта Комплекс LASTING FRESHNESS Arctic Mint 250 мл',
         },
         {
+            className: 'section__card',
             img: 'img/image-2.png',
             cash: '801 ₽',
             text: 'Сменные насадки для электрических зубных щеток Oral-B Sensi Ultrathin для бережной чистки, 2 шт.',
         },
         {
+            className: 'section__card',
             img: 'img/image-3.png',
             cash: '2 289 ₽',
             text: 'Электрическая зубная щетка Philips Sonicare 2 Series Gum Health HX6232/20 с двумя насадками, черный',
         },
         {
+            className: 'section__card',
             img: 'img/image-4.png',
             cash: '189 ₽',
             text: 'Oral-B Зубная нить Essential Floss вощеная, мята, 2шт',
@@ -39,8 +43,10 @@ html(lang="ru")
         <div style="display:none">
             <include src="build/img/icons/sprite.svg"></include>
         </div>
-        section
-            h1 С этим товаром покупают
-            each card in cardArr
-                +card(card.img,card.cash,card.text)
+        .container
+            section.section
+                h1.section__caption С этим товаром покупают
+                .section__row
+                    each card in cardArr
+                        +card(card.className,card.img,card.cash,card.text,card.sale)
         script(src='js/script.js')

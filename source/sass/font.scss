@@ -1,79 +1,19 @@
 @font-face {
-    font-family: "PTSans";
+    font-family: "Roboto";
     src:
-        url("../fonts/PTSans-Regular.woff2") format("woff2"),
-        url("../fonts/PTSans-Regular.woff") format("woff");
+        url("../fonts/Roboto-Regular.woff2") format("woff2"),
+        url("../fonts/Roboto-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "PTSans";
+    font-family: "Roboto";
     src:
-        url("../fonts/PTSans-Bold.woff2") format("woff2"),
-        url("../fonts/PTSans-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MyriadPro";
-    src:
-        url("../fonts/MyriadPro-Light.woff2") format("woff2"),
-        url("../fonts/MyriadPro-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MyriadPro";
-    src:
-        url("../fonts/MyriadPro-LightIt.woff2") format("woff2"),
-        url("../fonts/MyriadPro-LightIt.woff") format("woff");
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MyriadPro";
-    src:
-        url("../fonts/MyriadPro-Regular.woff2") format("woff2"),
-        url("../fonts/MyriadPro-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MyriadPro";
-    src:
-        url("../fonts/MyriadPro-Semibold.woff2") format("woff2"),
-        url("../fonts/MyriadPro-Semibold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MyriadPro";
-    src:
-        url("../fonts/MyriadPro-SemiboldIt.woff2") format("woff2"),
-        url("../fonts/MyriadPro-SemiboldIt.woff") format("woff");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MyriadPro";
-    src:
-        url("../fonts/MyriadPro-Bold.woff2") format("woff2"),
-        url("../fonts/MyriadPro-Bold.woff") format("woff");
-    font-weight: 700;
+        url("../fonts/Roboto-Medium.woff2") format("woff2"),
+        url("../fonts/Roboto-Medium.woff") format("woff");
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
